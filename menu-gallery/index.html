@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meni Slider Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+	<div class="header">
+		<img src="img/logo.png">
+
+		<button onclick="mobileMenu()">MENU</button>
+
+		<ul>
+			<li><a href="#">Početna</a></li>
+			<li><a href="#">O nama</a></li>
+			<li><a href="#">Usluge</a></li>
+			<li><a href="#">Galerija</a></li>
+			<li><a href="#">Kontakt</a></li>
+		</ul>
+	</div>
+
+	<h2>Galerija</h2>
+
+	<div class="slider-wrapper">
+        <button id="left-btn"><i class="arrow"></i></button>
+        <div class="slider-images">
+        	<img src="img/slide1.jpg">
+        	<img src="img/slide2.jpg">
+        	<img src="img/slide3.jpg">
+        </div>
+        <button id="right-btn"><i class="arrow"></i></button>
+    </div>
+
+            <h2>Portfolio</h2>
+
+            <div class="portfolio-wrapper">
+                <div class="portfolio-categories">
+                    <button data-category="sve">Sve</button>
+                    <button data-category="restorani" class="brown">Restorani</button>
+                    <button data-category="hoteli" class="blue">Hoteli</button>
+                    <button data-category="korporacije" class="green">Korporacije</button>
+                    <button data-category="fitness" class="yellow">Fitness</button>
+                    <button data-category="sport" class="red">Sport</button>
+                    <button data-category="ostalo" class="rose">Ostalo</button>
+                </div>
+
+                <div class="portfolio-items">
+                    <div class="portfolio-single-item blue" data-category="hoteli">
+                        <h3>Hotel 1</h3>
+                    </div>
+                    <div class="portfolio-single-item rose" data-category="ostalo">
+                        <h3>Startup</h3>
+                    </div>
+                    <div class="portfolio-single-item blue" data-category="hoteli, restorani">
+                        <h3>Hotel & Restoran</h3>
+                    </div>
+                    <div class="portfolio-single-item green" data-category="korporacije">
+                        <h3>Korporacija 1</h3>
+                    </div>
+                    <div class="portfolio-single-item brown" data-category="restorani">
+                        <h3>Restoran 1</h3>
+                    </div>
+                    <div class="portfolio-single-item rose" data-category="ostalo">
+                        <h3>XYZ Orgranizacija</h3>
+                    </div>
+                    <div class="portfolio-single-item blue" data-category="hoteli">
+                        <h3>Hotel 2</h3>
+                    </div>
+                    <div class="portfolio-single-item green" data-category="korporacije">
+                        <h3>Korporacija 2</h3>
+                    </div>
+                    <div class="portfolio-single-item brown" data-category="restorani">
+                        <h3>Restoran 2</h3>
+                    </div>
+                    <div class="portfolio-single-item yellow" data-category="fitness">
+                        <h3>Studio 1</h3>
+                    </div>
+                    <div class="portfolio-single-item yellow" data-category="fitness">
+                        <h3>Studio 2</h3>
+                    </div>
+                    <div class="portfolio-single-item red" data-category="sport">
+                        <h3>Basketball</h3>
+                    </div>
+                    <div class="portfolio-single-item red" data-category="sport">
+                        <h3>Tennis</h3>
+                    </div>
+                    <div class="portfolio-single-item red" data-category="sport">
+                        <h3>Football</h3>
+                    </div>
+                    <div class="portfolio-single-item red" data-category="sport">
+                        <h3>Kickbox</h3>
+                    </div>
+                </div>
+            </div>
+
+
+    <div class="modal-section">
+        <button class="modal-btn" onclick="openModal()">Modal Button</button>
+        <button class="modal-btn" onclick="openForm()">Open Modal</button>
+    </div>
+
+    <div class="popup-modal" id="modal1">
+        <button id="closeModal1" onclick="closeModal()">X</button>
+        <h3>First Modal</h3>
+        <br>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+<div class="overlay"></div>
+
+
+
+
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
